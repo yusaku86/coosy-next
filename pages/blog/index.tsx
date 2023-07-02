@@ -19,7 +19,6 @@ export const getServerSideProps = async () => {
   const blogs = await client.getEntries({
     content_type: "blogs",
     limit: 5,
-    order: "sys.createdAt",
   });
   console.log(blogs);
   return {
